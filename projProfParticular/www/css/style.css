@@ -25,3 +25,8 @@
 .login-page .action-button {
   font-weight: bolder;
 }
+
+.login-page .error-message {
+  color: #ff0000;
+  text-align:center;
+}

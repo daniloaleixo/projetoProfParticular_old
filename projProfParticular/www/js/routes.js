@@ -48,8 +48,8 @@ angular.module('app.routes', [])
 
   .state('login', {
     url: '/login',
-    templateUrl: 'templates/login.html',
-    controller: 'loginCtrl'
+    templateUrl: 'features/login/login.html',
+    controller: 'LoginCtrl as loginCtrl'
   })
 
   .state('signup', {
