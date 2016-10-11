@@ -29,26 +29,26 @@
                         {{ loginCtrl.signingUp ? 'Cadastrar' : 'Entrar'}}
                 </button>     
             </div>
-
-            <div>
-                <button class="button button-assertive button-block action-button" ng-click='loginCtrl.googleLogin()'>
-                  <i class="icon ion-social-google" style="margin-right:20px;"></i> 
-                  Entrar com o Google
-                </button>
-            </div>
-
-            <!--div>
-                <button class="button button-positive button-block action-button" ng-click='loginCtrl.facebookLogin()'>
-                  <i class="icon ion-social-facebook" style="margin-right:20px;"></i> 
-                  Entrar com o Facebook
-                </button>
-            </div-->
-
-                
-            <div class='padding signup-opt'
-                    ng-click="loginCtrl.signingUp = !loginCtrl.signingUp; loginCtrl.error='';" >
-                {{ loginCtrl.signingUp ? 'Já possui uma conta? Entre agora!' : 'Ainda não tem uma conta? Cadastre-se!'}}
-            </div>
         </form>
+
+        <div style="margin-top:40px;">
+            <button class="button button-assertive button-block action-button" ng-click='loginCtrl.googleLogin()'>
+              <i class="icon ion-social-google" style="margin-right:20px;"></i> 
+              Entrar com o Google
+            </button>
+        </div>
+
+        <!--div>
+            <button class="button button-positive button-block action-button" ng-click='loginCtrl.facebookLogin()'>
+              <i class="icon ion-social-facebook" style="margin-right:20px;"></i> 
+              Entrar com o Facebook
+            </button>
+        </div-->
+                
+        <div class='padding signup-opt'
+                ng-click="loginCtrl.signingUp = !loginCtrl.signingUp; loginCtrl.error='';" >
+            {{ loginCtrl.signingUp ? 'Já possui uma conta? Entre agora!' : 'Ainda não tem uma conta? Cadastre-se!'}}
+        </div>
+
     </ion-content>
 </ion-view>
