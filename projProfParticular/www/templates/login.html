@@ -13,7 +13,12 @@
                 <label class="item item-input" id="login-input2">
                     <input type="password" placeholder="Digite a senha">
                 </label>
+                <label class="item item-input" id="login-input3" ng-show="form.signingUp">
+                    <input type="password" placeholder="Digite novamente a senha">
+                </label>
             </ion-list>
+
+
             <div>
                 <button ui-sref="menu.home" id="login-button1" 
                         class="button button-balanced  button-block action-button">
