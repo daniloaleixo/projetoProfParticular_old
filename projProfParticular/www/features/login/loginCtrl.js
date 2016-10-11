@@ -20,11 +20,16 @@ function ($scope, $stateParams, $ionicLoading) {
 	loginCtrl.login = function(){
 		loginCtrl.error = '';
 
+		//A senha do firebase deve ser maior que 6 caracteres
+		if(loginCtrl.user.password.length < 6) {
+			loginCtrl.error = "Sua senha deve ser maior que 6 caracteres";
+			return ;
+		}	
+
+
 		if(loginCtrl.signingUp) loginCtrl.register();
 		else {
 			console.log("Vou tentar fazer login");
-
-			console.log(firebase.auth());
 
 			firebase.auth().signInWithEmailAndPassword(loginCtrl.user.email, loginCtrl.user.password)
 			.then(function(auth){
