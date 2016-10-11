@@ -8,17 +8,22 @@
         <form id="login-form1" class="list">
             <ion-list id="login-list1">
                 <label class="item item-input" id="login-input1">
-                    <span class="input-label">Email</span>
-                    <input type="email" placeholder="">
+                    <input type="email" placeholder="Digite seu email">
                 </label>
                 <label class="item item-input" id="login-input2">
-                    <span class="input-label">Password</span>
-                    <input type="password" placeholder="">
+                    <input type="password" placeholder="Digite a senha">
                 </label>
             </ion-list>
-            <div class="spacer" style="height: 40px;"></div>
-            <a ui-sref="menu.home" id="login-button1" class="button button-balanced  button-block">Log in</a>
-            <a ui-sref="signup" id="login-button4" style="color:#387EF5;" class="button button-light  button-block">Or create an account</a>
+            <div>
+                <button ui-sref="menu.home" id="login-button1" 
+                        class="button button-balanced  button-block action-button">
+                        {{ form.signingUp ? 'Cadastrar' : 'Entrar'}}
+                </button>    
+            </div>
+            <div class='padding signup-opt'
+                    ng-click="form.signingUp = !form.signingUp">
+                {{ form.signingUp ? 'Já possui uma conta? Entre agora!' : 'Ainda não tem uma conta? Cadastre-se!'}}
+            </div>
         </form>
     </ion-content>
 </ion-view>

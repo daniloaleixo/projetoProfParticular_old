@@ -13,3 +13,15 @@
   letter-spacing: -3px;
   font-size:42px;
 }
+
+.login-page .signup-opt {
+  color:#fff;
+  padding:15px;
+  margin-top:10px;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.action-button {
+  font-weight: bolder;
+}
