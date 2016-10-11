@@ -54,7 +54,9 @@
     <script src="features/login/loginCtrl.js"></script>    
     
 
-    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+        <!-- Firebase & AngularFire -->
+    <script src="lib/firebase/firebase.js"></script>
+    <script src="lib/angularfire/dist/angularfire.min.js"></script> 
     <script>
       // Initialize Firebase
       var config = {
@@ -66,6 +68,7 @@
       };
       firebase.initializeApp(config);
     </script>
+
 
     <!-- Only required for Tab projects w/ pages in multiple tabs 
     <script src="lib/ionicuirouter/ionicUIRouter.js"></script>

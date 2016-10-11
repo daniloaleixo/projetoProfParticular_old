@@ -6,9 +6,10 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services',])
 
-.run(function($ionicPlatform) {
+var appProf = angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services', 'firebase'])
+
+appProf.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)

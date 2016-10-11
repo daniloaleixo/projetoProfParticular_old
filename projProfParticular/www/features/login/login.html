@@ -7,7 +7,9 @@
 
         <span class='error-message' ng-show='loginCtrl.error'> {{loginCtrl.error}} </span>
 
-        <form id="login-form1" class="list">
+        <form id="login-form1" class="list"
+                ng-submit='loginCtrl.login()'>
+
             <ion-list id="login-list1">
                 <label class="item item-input" id="login-input1">
                     <input type="email" placeholder="Digite seu email" ng-model='loginCtrl.user.email'>
@@ -22,14 +24,14 @@
 
             
             <div>
-                <button id="login-button1" class="button button-balanced  button-block action-button"
-                            ng-click='loginCtrl.login()'>
+                <button type="submit"
+                id="login-button1" class="button button-balanced  button-block action-button">
                         {{ loginCtrl.signingUp ? 'Cadastrar' : 'Entrar'}}
                 </button>     
             </div>
                 
             <div class='padding signup-opt'
-                    ng-click="loginCtrl.signingUp = !loginCtrl.signingUp">
+                    ng-click="loginCtrl.signingUp = !loginCtrl.signingUp; loginCtrl.error='';" >
                 {{ loginCtrl.signingUp ? 'Já possui uma conta? Entre agora!' : 'Ainda não tem uma conta? Cadastre-se!'}}
             </div>
         </form>
