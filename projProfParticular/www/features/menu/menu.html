@@ -25,10 +25,24 @@
             </div>
 
             <ion-list id="menu-list3">
-                <ion-item id="menu-list-item1" ui-sref="menu.home" menu-close="">Home</ion-item>
-                <ion-item id="menu-list-item2" ui-sref="menu.professores" menu-close="">Professores</ion-item>
-                <ion-item id="menu-list-item3" ui-sref="menu.historico" menu-close="">Histórico</ion-item>
+                <ion-item id="menu-list-item1" ui-sref="menu.home" menu-close="" class='item item-icon-left'>
+                    <i class="icon ion-home"></i>
+                    Home
+                </ion-item>
+                <ion-item id="menu-list-item2" ui-sref="menu.professores" menu-close="" class='item item-icon-left'>
+                    <i class="icon ion-university"></i>
+                    Professores
+                </ion-item>
+                <ion-item id="menu-list-item3" ui-sref="menu.historico" menu-close="" class='item item-icon-left'>
+                    <i class="icon ion-clock"></i>
+                    Histórico
+                </ion-item>
             </ion-list>
+
         </ion-content>
+
+    <div class='bar bar-footer bar-clean'>
+                <div class='title'>Sair</div>
+            </div>
     </ion-side-menu>
 </ion-side-menus>
