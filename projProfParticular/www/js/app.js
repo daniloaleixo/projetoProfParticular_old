@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 
 
-var appProf = angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services', 'firebase'])
+var appProf = angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services', 'firebase']);
 
 appProf.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
