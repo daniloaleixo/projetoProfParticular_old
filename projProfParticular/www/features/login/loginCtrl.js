@@ -30,6 +30,8 @@ function ($scope, $stateParams, $ionicLoading, $location) {
 
 	loginCtrl.login = function(){
 		loginCtrl.error = '';
+		//reinicia a variavel global do user
+		firebaseUser = null;
 
 		//A senha do firebase deve ser maior que 6 caracteres
 		if(loginCtrl.user.password.length < 6 && loginCtrl.user.password.length != 0) {
@@ -48,6 +50,7 @@ function ($scope, $stateParams, $ionicLoading, $location) {
 
 			trySignIn.then(function(auth){
 				//console.log("Estou logado como " + auth.email);
+				firebaseUser = auth;
 				hideLoading();
 				$location.path('/home');
 			}, function(error){
@@ -68,6 +71,7 @@ function ($scope, $stateParams, $ionicLoading, $location) {
 
 			tryRegister.then(function(user){
 				//console.log("Consegui me registrar");
+				console.log(firebaseUser);
 				hideLoading();
 				loginCtrl.login();
 
@@ -81,6 +85,9 @@ function ($scope, $stateParams, $ionicLoading, $location) {
 	};
 
 	loginCtrl.googleLogin = function(){
+		//reinicia a variavel global do user
+		firebaseUser = null;
+
 		console.log("Vou tentear fazer o login com o google");
 
 		var provider = new firebase.auth.GoogleAuthProvider();
@@ -91,7 +98,7 @@ function ($scope, $stateParams, $ionicLoading, $location) {
 		  // This gives you a Google Access Token. You can use it to access the Google API.
 		  var token = result.credential.accessToken;
 		  // The signed-in user info.
-		  var user = result.user;
+		  firebaseUser = result.user;
 		  console.log("User " + user);
 		  hideLoading();
 		  $location.path('/home');
