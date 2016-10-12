@@ -22,6 +22,9 @@ function ($scope, $stateParams, $location) {
 		  	console.log('Signed Out');
 		  	firebaseUser = null;
 		  	$location.path('/login');
+		  	menuCtrl.displayName = null;
+			menuCtrl.photoURL = null;
+			menuCtrl.email = null;
 		  	return ;
 		}, function(error) {
 		  	console.error('Sign Out Error', error);
