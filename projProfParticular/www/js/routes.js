@@ -43,7 +43,7 @@ angular.module('app.routes', [])
   .state('menu', {
     url: '/side-menu21',
     templateUrl: 'templates/menu.html',
-    controller: 'menuCtrl'
+    controller: 'MenuCtrl as menuCtrl'
   })
 
   .state('login', {
