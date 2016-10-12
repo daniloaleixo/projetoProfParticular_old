@@ -1,6 +1,6 @@
 <ion-side-menus enable-menu-with-back-views="false">
     <ion-side-menu-content>
-        <ion-nav-bar class="bar-balanced">
+        <ion-nav-bar class="bar-balanced" hide-nav-bar='true'>
             <ion-nav-back-button></ion-nav-back-button>
             <ion-nav-buttons side="left">
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
@@ -15,9 +15,14 @@
             <div class="title">Menu</div>
         </ion-header-bar>
         <ion-content padding="false" class="side-menu-left has-header ">
-            <img class='item-avatar-overload' src="{{ menuCtrl.photoURL }}">
+            <!--img class='item-avatar-overload' src="{{ menuCtrl.photoURL }}">
                 <h2 class='user-name'>{{ menuCtrl.displayName }}</h2>
-                <div style="margin-top:30px;"></div>
+                <div style="margin-top:30px;"></div-->
+            <div class="item item-avatar">
+                <img src="{{ menuCtrl.photoURL }}">
+                <h2>{{ menuCtrl.displayName }}</h2>
+                <p>{{menuCtrl.email}}</p>
+            </div>
 
             <ion-list id="menu-list3">
                 <ion-item id="menu-list-item1" ui-sref="menu.home" menu-close="">Home</ion-item>

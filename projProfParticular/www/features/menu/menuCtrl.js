@@ -12,6 +12,7 @@ function ($scope, $stateParams) {
 
 	menuCtrl.displayName = firebaseUser.displayName || firebaseUser.email;
 	menuCtrl.photoURL = firebaseUser.photoURL || 'img/login-bkg.jpg';
+	menuCtrl.email = firebaseUser.email;
 
 	console.log("MenuCtrl: displayName: " + menuCtrl.displayName);
 	console.log("MenuCtrl: photoURL: " + menuCtrl.photoURL);
