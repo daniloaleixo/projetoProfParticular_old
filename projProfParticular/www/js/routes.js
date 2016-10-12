@@ -6,6 +6,8 @@ angular.module('app.routes', [])
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
+  
+  
   $stateProvider
     
   
@@ -15,7 +17,12 @@ angular.module('app.routes', [])
     views: {
       'side-menu21': {
         templateUrl: 'templates/home.html',
-        controller: 'HomeCtrl as homeCtrl'
+        controller: 'HomeCtrl as homeCtrl',
+        resolve: {
+          'currentAuth': ['Auth', function(Auth){
+            return Auth.$waitForSignIn();
+          }]
+        }
       }
     }
   })
