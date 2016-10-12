@@ -23,11 +23,7 @@ angular.module('app.routes', [])
           // Auth refers to our $firebaseAuth wrapper in the factory
           'currentAuth': ['Auth', function(Auth){
             // $waitForSignIn returns a promise so the resolve waits for it to complete
-            return Auth.$waitForSignIn().then(function(auth){ 
-              console.log("Peguei o usuario"); 
-              firebaseUser = auth;
-              console.log("O usuario e " + firebaseUser); 
-            });
+            return Auth.$waitForSignIn().then(function(auth){ firebaseUser = auth; });
           }]
         }
       }

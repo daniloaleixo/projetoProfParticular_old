@@ -5,8 +5,7 @@ appProf
 function ($scope, $stateParams) {
 	homeCtrl = this;
 	
-	console.log("home Ctrl:");
-	console.log(firebaseUser.email);
-	//console.log("to aqui dentro com o " + currentUser.email);
+	//console.log("home Ctrl:");
+	//console.log("email: " + firebaseUser.email);
 
 }])
