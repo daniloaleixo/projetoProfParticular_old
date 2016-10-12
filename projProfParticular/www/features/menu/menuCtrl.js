@@ -1,10 +1,10 @@
 
 //NAO MUDAR PARA appProf SE NAO DA ERRO
 angular.module('app.controllers', [])
-.controller('MenuCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('MenuCtrl', ['$scope', '$stateParams', '$location',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+function ($scope, $stateParams, $location) {
 	var menuCtrl = this;
 
 	console.log("Menu: displayName: " + firebaseUser.displayName);
@@ -16,5 +16,17 @@ function ($scope, $stateParams) {
 
 	console.log("MenuCtrl: displayName: " + menuCtrl.displayName);
 	console.log("MenuCtrl: photoURL: " + menuCtrl.photoURL);
+
+	menuCtrl.logout = function(){
+		firebase.auth().signOut().then(function() {
+		  	console.log('Signed Out');
+		  	firebaseUser = null;
+		  	$location.path('/login');
+		  	return ;
+		}, function(error) {
+		  	console.error('Sign Out Error', error);
+		});
+		//console.log("logout");
+	}
 
 }])
