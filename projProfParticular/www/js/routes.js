@@ -6,20 +6,23 @@ angular.module('app.routes', [])
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  
-  
+
+
   $stateProvider
     
   
 
-      .state('menu.home', {
+  .state('menu.home', {
     url: '/home',
     views: {
       'side-menu21': {
         templateUrl: 'templates/home.html',
         controller: 'HomeCtrl as homeCtrl',
         resolve: {
+          // controller will not be loaded until $waitForSignIn resolves
+          // Auth refers to our $firebaseAuth wrapper in the factory
           'currentAuth': ['Auth', function(Auth){
+            // $waitForSignIn returns a promise so the resolve waits for it to complete
             return Auth.$waitForSignIn();
           }]
         }
