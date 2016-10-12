@@ -95,19 +95,20 @@ function ($scope, $stateParams, $ionicLoading, $location) {
   		var tryGoogleSignIn = firebase.auth().signInWithPopup(provider);
   		showLoading();
   		tryGoogleSignIn.then(function(result) {
-		  // This gives you a Google Access Token. You can use it to access the Google API.
-		  var token = result.credential.accessToken;
-		  // The signed-in user info.
-		  firebaseUser = result.user;
-		  console.log("User " + user);
-		  hideLoading();
-		  $location.path('/home');
+  			//console.log("consegui acessar a conta Google");
+		  	// This gives you a Google Access Token. You can use it to access the Google API.
+		  	var token = result.credential.accessToken;
+		  	// The signed-in user info.
+		  	firebaseUser = result.user;
+		  	//console.log("User " + firebaseUser);
+		  	hideLoading();
+		  	$location.path('/home');
 
 		}).catch(function(error){
 					  // Handle Errors here.
-		  var errorCode = error.code;
-		  loginCtrl.error = error.message;
-		  hideLoading();
+		  	var errorCode = error.code;
+		  	loginCtrl.error = error.message;
+		  	hideLoading();
 		});
 	};
 

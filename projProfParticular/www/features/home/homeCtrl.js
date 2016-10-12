@@ -3,9 +3,9 @@ appProf
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
-	homeCtrl = this;
+	var homeCtrl = this;
 	
 	//console.log("home Ctrl:");
-	//console.log("email: " + firebaseUser.email);
+	console.log("Home: email: " + firebaseUser.email);
 
 }])

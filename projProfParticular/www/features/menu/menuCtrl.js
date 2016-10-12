@@ -5,5 +5,15 @@ angular.module('app.controllers', [])
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
+	var menuCtrl = this;
+
+	console.log("Menu: displayName: " + firebaseUser.displayName);
+	console.log("Menu: photoURL: " + firebaseUser.photoURL);
+
+	menuCtrl.displayName = firebaseUser.displayName || firebaseUser.email;
+	menuCtrl.photoURL = firebaseUser.photoURL || 'img/login-bkg.jpg';
+
+	console.log("MenuCtrl: displayName: " + menuCtrl.displayName);
+	console.log("MenuCtrl: photoURL: " + menuCtrl.photoURL);
 
 }])
