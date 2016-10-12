@@ -15,7 +15,7 @@ angular.module('app.routes', [])
     views: {
       'side-menu21': {
         templateUrl: 'templates/home.html',
-        controller: 'homeCtrl'
+        controller: 'HomeCtrl as homeCtrl'
       }
     }
   })
