@@ -61,7 +61,7 @@ angular.module('app.routes', [])
     views: {
       'side-menu21': {
         templateUrl: 'features/profile/profile.html',
-        controller: 'historicoCtrl',
+        controller: 'ProfileCtrl as profileCtrl'
         
       }
     }
