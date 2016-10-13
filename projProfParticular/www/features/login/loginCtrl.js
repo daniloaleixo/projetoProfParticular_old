@@ -42,14 +42,14 @@ function ($scope, $stateParams, $ionicLoading, $location) {
 		//Se for pra registrar manda pra la
 		if(loginCtrl.signingUp) loginCtrl.register();
 		else {
-			//console.log("Vou tentar fazer login");
+			console.log("LoginCtrl | Vou tentar fazer login");
 
 			var trySignIn = firebase.auth().signInWithEmailAndPassword(loginCtrl.user.email, loginCtrl.user.password);
 
 			showLoading();
 
 			trySignIn.then(function(auth){
-				//console.log("Estou logado como " + auth.email);
+				console.log("LoginCtrl |  Estou logado como " + auth.email);
 				firebaseUser = auth;
 				hideLoading();
 				$location.path('/home');
@@ -63,14 +63,14 @@ function ($scope, $stateParams, $ionicLoading, $location) {
 	loginCtrl.register = function(){
 		//Compara as senhas
 		if(loginCtrl.user.password == loginCtrl.user.password2){
-			//console.log("Vou tentar me registrar");
+			console.log("LoginCtrl | Vou tentar me registrar");
 
 			var tryRegister = firebase.auth().createUserWithEmailAndPassword(loginCtrl.user.email, loginCtrl.user.password);
 
 			showLoading();
 
 			tryRegister.then(function(user){
-				//console.log("Consegui me registrar");
+				console.log("LoginCtrl | Consegui me registrar");
 				console.log(firebaseUser);
 				hideLoading();
 				loginCtrl.login();
@@ -88,14 +88,14 @@ function ($scope, $stateParams, $ionicLoading, $location) {
 		//reinicia a variavel global do user
 		firebaseUser = null;
 
-		console.log("Vou tentear fazer o login com o google");
+		console.log("LoginCtrl | Vou tentear fazer o login com o google");
 
 		var provider = new firebase.auth.GoogleAuthProvider();
 
   		var tryGoogleSignIn = firebase.auth().signInWithPopup(provider);
   		showLoading();
   		tryGoogleSignIn.then(function(result) {
-  			//console.log("consegui acessar a conta Google");
+  			console.log("LoginCtrl | consegui acessar a conta Google");
 		  	// This gives you a Google Access Token. You can use it to access the Google API.
 		  	var token = result.credential.accessToken;
 		  	// The signed-in user info.

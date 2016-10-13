@@ -6,6 +6,6 @@ function ($scope, $stateParams) {
 	var homeCtrl = this;
 	
 	//console.log("home Ctrl:");
-	console.log("Home: email: " + firebaseUser.email);
+	console.log("HomeCtrl| : email: " + firebaseUser.email);
 
 }])

@@ -7,19 +7,19 @@ angular.module('app.controllers', [])
 function ($scope, $stateParams, $location) {
 	var menuCtrl = this;
 
-	console.log("Menu: displayName: " + firebaseUser.displayName);
-	console.log("Menu: photoURL: " + firebaseUser.photoURL);
+	console.log("MenuCtrl| Menu: displayName: " + firebaseUser.displayName);
+	console.log("MenuCtrl| Menu: photoURL: " + firebaseUser.photoURL);
 
 	menuCtrl.displayName = firebaseUser.displayName || firebaseUser.email;
 	menuCtrl.photoURL = firebaseUser.photoURL || 'img/login-bkg.jpg';
 	menuCtrl.email = firebaseUser.email;
 
-	console.log("MenuCtrl: displayName: " + menuCtrl.displayName);
-	console.log("MenuCtrl: photoURL: " + menuCtrl.photoURL);
+	console.log("MenuCtrl| MenuCtrl: displayName: " + menuCtrl.displayName);
+	console.log("MenuCtrl| MenuCtrl: photoURL: " + menuCtrl.photoURL);
 
 	menuCtrl.logout = function(){
 		firebase.auth().signOut().then(function() {
-		  	console.log('Signed Out');
+		  	console.log('MenuCtrl| Signed Out');
 		  	firebaseUser = null;
 		  	$location.path('/login');
 		  	menuCtrl.displayName = null;
@@ -27,7 +27,7 @@ function ($scope, $stateParams, $location) {
 			menuCtrl.email = null;
 		  	return ;
 		}, function(error) {
-		  	console.error('Sign Out Error', error);
+		  	console.error('MenuCtrl| Sign Out Error', error);
 		});
 		//console.log("logout");
 	}
