@@ -56,11 +56,11 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.historico', {
-    url: '/historico',
+  .state('menu.profile', {
+    url: '/profile',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/historico.html',
+        templateUrl: 'features/profile/profile.html',
         controller: 'historicoCtrl',
         
       }
