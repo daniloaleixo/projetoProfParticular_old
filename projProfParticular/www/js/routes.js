@@ -21,10 +21,16 @@ angular.module('app.routes', [])
         resolve: {
           // controller will not be loaded until $requireSignIn resolves
           // Auth refers to our $firebaseAuth wrapper in the factory below
-          "currentAuth": ["Auth", function(Auth) {
+          "currentAuth": ["Auth", '$state', function(Auth, $state) {
+            console.log("Home Resolve| estou aqui");
             // $requireSignIn returns a promise so the resolve waits for it to complete
             // If the promise is rejected, it will throw a $stateChangeError (see above)
-            return Auth.$requireSignIn();
+            return Auth.$requireSignIn().then(function(){
+              console.log("Home Resolve| deu certo wait for sigj in");
+            }, function(error){
+              console.log("Home Resolve| erro vou para a pagina de login");
+              return $state.go('login')
+            });
           }]
         }
       }
@@ -70,11 +76,13 @@ angular.module('app.routes', [])
       // Auth refers to our $firebaseAuth wrapper in the factory
       'currentAuth': ['Auth', '$state', function(Auth, $state){
         // $waitForSignIn returns a promise so the resolve waits for it to complete
-        return Auth.$waitForSignIn().then(function(auth){ 
+        return Auth.$waitForSignIn().then(function(auth){
+          console.log("Menu Resolve|esrou aqui");
           firebaseUser = auth; 
+          //if(firebaseUser == null) return $state.go('login');
         }, function(error){
-          console.log("/home Resolve | Não consegui autenticar vou para o login");
-          return $state.go('/login')
+          console.log("Menu Resolve| Não consegui autenticar vou para o login");
+          return $state.go('login')
         });
       }]
     }

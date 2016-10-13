@@ -18,7 +18,7 @@ function ($scope, $stateParams, $location) {
 		console.log("MenuCtrl| Menu: photoURL: " + firebaseUser.photoURL);
 		menuCtrl.user.displayName = firebaseUser.displayName || firebaseUser.email;
 		menuCtrl.user.photoURL = firebaseUser.photoURL || 'img/login-bkg.jpg';
-		menuCtrl.user.email = firebaseUser.email;
+		menuCtrl.user.email = firebaseUser.email || '';
 
 		console.log("MenuCtrl| MenuCtrl: displayName: " + menuCtrl.user.displayName);
 		console.log("MenuCtrl| MenuCtrl: photoURL: " + menuCtrl.user.photoURL);

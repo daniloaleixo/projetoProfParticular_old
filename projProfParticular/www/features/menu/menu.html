@@ -20,7 +20,7 @@
                 <div style="margin-top:30px;"></div-->
             <div class="item item-avatar">
                 <img src="{{ menuCtrl.user.photoURL }}">
-                <h2>{{ menuCtrl.user.displayName }}</h2>
+                <h2>{{ menuCtrl.user.displayName || '' }}</h2>
                 <p>{{menuCtrl.user.email}}</p>
             </div>
 
