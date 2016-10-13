@@ -4,8 +4,11 @@ angular.module('app.controllers', [])
 .controller('MenuCtrl', ['$scope', '$stateParams', '$location',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $location) {
+function ($scope, $stateParams, $location, currentAuth) {
 	var menuCtrl = this;
+
+	console.log("MenuCtrl| estou aqui");
+	console.log(currentAuth);
 
 	menuCtrl.user = {
 		displayName: '',
@@ -23,7 +26,6 @@ function ($scope, $stateParams, $location) {
 		console.log("MenuCtrl| MenuCtrl: displayName: " + menuCtrl.user.displayName);
 		console.log("MenuCtrl| MenuCtrl: photoURL: " + menuCtrl.user.photoURL);
 
-		$scope.$apply();
 	}
 
 	menuCtrl.logout = function(){
