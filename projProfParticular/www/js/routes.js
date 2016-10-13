@@ -19,11 +19,12 @@ angular.module('app.routes', [])
         templateUrl: 'templates/home.html',
         controller: 'HomeCtrl as homeCtrl',
         resolve: {
-          // controller will not be loaded until $waitForSignIn resolves
-          // Auth refers to our $firebaseAuth wrapper in the factory
-          'currentAuth': ['Auth', function(Auth){
-            // $waitForSignIn returns a promise so the resolve waits for it to complete
-            return Auth.$waitForSignIn().then(function(auth){ firebaseUser = auth; });
+          // controller will not be loaded until $requireSignIn resolves
+          // Auth refers to our $firebaseAuth wrapper in the factory below
+          "currentAuth": ["Auth", function(Auth) {
+            // $requireSignIn returns a promise so the resolve waits for it to complete
+            // If the promise is rejected, it will throw a $stateChangeError (see above)
+            return Auth.$requireSignIn();
           }]
         }
       }
@@ -55,15 +56,7 @@ angular.module('app.routes', [])
       'side-menu21': {
         templateUrl: 'templates/historico.html',
         controller: 'historicoCtrl',
-        resolve: {
-          // controller will not be loaded until $requireSignIn resolves
-          // Auth refers to our $firebaseAuth wrapper in the factory below
-          "currentAuth": ["Auth", function(Auth) {
-            // $requireSignIn returns a promise so the resolve waits for it to complete
-            // If the promise is rejected, it will throw a $stateChangeError (see above)
-            return Auth.$requireSignIn();
-          }]
-        }
+        
       }
     }
   })
@@ -73,12 +66,16 @@ angular.module('app.routes', [])
     templateUrl: 'features/menu/menu.html',
     controller: 'MenuCtrl as menuCtrl',
     resolve: {
-      // controller will not be loaded until $requireSignIn resolves
-      // Auth refers to our $firebaseAuth wrapper in the factory below
-      "currentAuth": ["Auth", function(Auth) {
-        // $requireSignIn returns a promise so the resolve waits for it to complete
-        // If the promise is rejected, it will throw a $stateChangeError (see above)
-        return Auth.$requireSignIn();
+      // controller will not be loaded until $waitForSignIn resolves
+      // Auth refers to our $firebaseAuth wrapper in the factory
+      'currentAuth': ['Auth', '$state', function(Auth, $state){
+        // $waitForSignIn returns a promise so the resolve waits for it to complete
+        return Auth.$waitForSignIn().then(function(auth){ 
+          firebaseUser = auth; 
+        }, function(error){
+          console.log("/home Resolve | Não consegui autenticar vou para o login");
+          return $state.go('/login')
+        });
       }]
     }
   })
