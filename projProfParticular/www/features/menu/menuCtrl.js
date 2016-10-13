@@ -22,6 +22,8 @@ function ($scope, $stateParams, $location) {
 
 		console.log("MenuCtrl| MenuCtrl: displayName: " + menuCtrl.user.displayName);
 		console.log("MenuCtrl| MenuCtrl: photoURL: " + menuCtrl.user.photoURL);
+
+		$scope.$apply();
 	}
 
 	menuCtrl.logout = function(){
