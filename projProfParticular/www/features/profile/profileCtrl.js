@@ -36,6 +36,7 @@ function ($scope, $stateParams) {
 				displayName: profileCtrl.newUserInfos.displayName
 			}).then(function(){
 				console.log("ProfileCtrl |Display Name foi atualizado com sucesso!");
+				user.$save();
 			}, function(error){
 				console.log("ProfileCtrl |Erro ao atualizar Display Name");
 			});
