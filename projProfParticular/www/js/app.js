@@ -9,7 +9,7 @@
 
 var appProf = angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services', 'firebase']);
 
-var firebaseUser;
+appProf.value('user');
 
 appProf.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

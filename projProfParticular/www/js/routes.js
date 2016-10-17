@@ -78,8 +78,8 @@ angular.module('app.routes', [])
         // $waitForSignIn returns a promise so the resolve waits for it to complete
         return Auth.$waitForSignIn().then(function(auth){
           console.log("Menu Resolve|esrou aqui");
-          firebaseUser = auth; 
-          //if(firebaseUser == null) return $state.go('login');
+          user = auth; 
+          //if(user == null) return $state.go('login');
         }, function(error){
           console.log("Menu Resolve| Não consegui autenticar vou para o login");
           return $state.go('login')

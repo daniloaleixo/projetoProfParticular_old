@@ -16,12 +16,12 @@ function ($scope, $stateParams, $location, currentAuth) {
 		email: ''
 	};
 
-	if(firebaseUser != null){
-		console.log("MenuCtrl| Menu: displayName: " + firebaseUser.displayName);
-		console.log("MenuCtrl| Menu: photoURL: " + firebaseUser.photoURL);
-		menuCtrl.user.displayName = firebaseUser.displayName || firebaseUser.email;
-		menuCtrl.user.photoURL = firebaseUser.photoURL || 'img/login-bkg.jpg';
-		menuCtrl.user.email = firebaseUser.email || '';
+	if(user != null){
+		console.log("MenuCtrl| Menu: displayName: " + user.displayName);
+		console.log("MenuCtrl| Menu: photoURL: " + user.photoURL);
+		menuCtrl.user.displayName = user.displayName || user.email;
+		menuCtrl.user.photoURL = user.photoURL || 'img/login-bkg.jpg';
+		menuCtrl.user.email = user.email || '';
 
 		console.log("MenuCtrl| MenuCtrl: displayName: " + menuCtrl.user.displayName);
 		console.log("MenuCtrl| MenuCtrl: photoURL: " + menuCtrl.user.photoURL);
@@ -31,7 +31,7 @@ function ($scope, $stateParams, $location, currentAuth) {
 	menuCtrl.logout = function(){
 		firebase.auth().signOut().then(function() {
 		  	console.log('MenuCtrl| Signed Out');
-		  	firebaseUser = null;
+		  	user = null;
 		  	$location.path('/login');
 		  	menuCtrl.user.displayName = null;
 			menuCtrl.user.photoURL = null;

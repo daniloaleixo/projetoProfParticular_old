@@ -17,12 +17,12 @@ function ($scope, $stateParams) {
 		email: ''
 	};
 
-	if(firebaseUser != null){
-		console.log("ProfileCtrl| Menu: displayName: " + firebaseUser.displayName);
-		console.log("ProfileCtrl| Menu: photoURL: " + firebaseUser.photoURL);
-		profileCtrl.user.displayName = firebaseUser.displayName || firebaseUser.email;
-		profileCtrl.user.photoURL = firebaseUser.photoURL || 'img/login-bkg.jpg';
-		profileCtrl.user.email = firebaseUser.email || '';
+	if(user != null){
+		console.log("ProfileCtrl| Menu: displayName: " + user.displayName);
+		console.log("ProfileCtrl| Menu: photoURL: " + user.photoURL);
+		profileCtrl.user.displayName = user.displayName || user.email;
+		profileCtrl.user.photoURL = user.photoURL || 'img/login-bkg.jpg';
+		profileCtrl.user.email = user.email || '';
 
 		console.log("ProfileCtrl| ProfileCtrl: displayName: " + profileCtrl.user.displayName);
 		console.log("ProfileCtrl| ProfileCtrl: photoURL: " + profileCtrl.user.photoURL);
@@ -31,8 +31,8 @@ function ($scope, $stateParams) {
 
 	profileCtrl.changeDisplayName = function(){
 		console.log("Estou aqui");
-		if(profileCtrl.newUserInfos.displayName != '' && firebaseUser != null){
-			firebaseUser.updateProfile({
+		if(profileCtrl.newUserInfos.displayName != '' && user != null){
+			user.updateProfile({
 				displayName: profileCtrl.newUserInfos.displayName
 			}).then(function(){
 				console.log("ProfileCtrl |Display Name foi atualizado com sucesso!");
