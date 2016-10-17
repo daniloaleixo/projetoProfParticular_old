@@ -1,24 +1,28 @@
 <ion-view title="Profile" id="page3">
     <ion-content padding="true" class="has-header">
 
-    <div style='text-align: center;margin-bottom: 50px;'>
+    <div style='text-align: center;margin-bottom: 50px;' class='user-name'>
         <div>
         	<img class='wrapper' src="{{profileCtrl.user.photoURL}}">
         </div>
         <!--a class="button button-icon icon-left ion-settings"> Editar Foto</a-->    
-        <button class="button icon-left ion-camera">Editar Foto</button>
+        <label>
+            Nome de usuário: 
+            <p class='small'>{{profileCtrl.user.displayName}}</p>
+        </label>
     </div>
 
-    <div class='user-name'>
-    	<label class="small" style='margin-bottom: 20px;'>
-    		{{profileCtrl.user.displayName}}
-    	</label>
+    <div style='text-align: center;'>
     	<form  ng-submit='profileCtrl.changeDisplayName()'>
     		<label class="item item-input icon-right" id="login-input1" style="margin-top:20px;">
     	    <input type="text" placeholder="Digite um novo nome de usuário" ng-model='profileCtrl.newUserInfos.displayName'>
     	    <button class="button icon ion-checkmark-round"></button>
     	</label>
     	</form>
+
+        <button class="button icon-left ion-camera"
+                style='margin-top: 30px;'>
+                Editar Foto</button>
     </div>
 
 
