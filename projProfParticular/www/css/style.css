@@ -46,6 +46,14 @@ text-align: center;
   font-size:22px;
 }
 
+.user-name .small {
+  color:#555555;
+  text-align: center;
+  font-weight: bolder;
+  font-size:18px;
+}
+
+
 .wrapper {
     
     /* make a square container */

@@ -1,8 +1,8 @@
 appProf
-.controller('ProfileCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('ProfileCtrl', ['$scope', '$stateParams', '$location', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+function ($scope, $stateParams, $location) {
 	var profileCtrl = this;
 
 	profileCtrl.user = {
@@ -36,7 +36,8 @@ function ($scope, $stateParams) {
 				displayName: profileCtrl.newUserInfos.displayName
 			}).then(function(){
 				console.log("ProfileCtrl |Display Name foi atualizado com sucesso!");
-				user.$save();
+				//user.$save();
+				$location.path('/home');
 			}, function(error){
 				console.log("ProfileCtrl |Erro ao atualizar Display Name");
 			});
