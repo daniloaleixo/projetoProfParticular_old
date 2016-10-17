@@ -25,6 +25,11 @@
             </div>
 
             <ion-list id="menu-list3">
+                <ion-item id="menu-list-item3" ui-sref="menu.profile" menu-close="" class='item     item-icon-left'>
+                    <i class="icon ion-clock"></i>
+                    Editar perfil
+                </ion-item>
+                <div style="margin-top:80px;"></div>
                 <ion-item id="menu-list-item1" ui-sref="menu.home" menu-close="" class='item item-icon-left'>
                     <i class="icon ion-home"></i>
                     Home
@@ -33,20 +38,28 @@
                     <i class="icon ion-university"></i>
                     Professores
                 </ion-item>
-                <ion-item id="menu-list-item3" ui-sref="menu.profile" menu-close="" class='item item-icon-left'>
-                    <i class="icon ion-clock"></i>
-                    Editar perfil
-                </ion-item>
             </ion-list>
 
-            <div style="margin-top:20px;">
+            <!--div style="margin-top:20px;">
                 <button class="button button-block button-light" ng-click="menuCtrl.logout()">
                     <i class='icon ion-log-out'></i>    
                     Sair
                 </button>
-            </div>
+            </div-->
 
         </ion-content>
+
+        <ion-footer-bar class="bar-stable">
+            <!--ion-item nav-clear menu-close href="#" 
+                     style="left:0;right:0;margin:0; width: 100%;position: fixed;padding-bottom:40px;">
+            Sair
+            </ion-item-->
+            <button class="button button-block button-light" ng-click="menuCtrl.logout()"
+                        style="left:0;right:0;margin:0; width: 100%;position: fixed">
+                    <i class='icon ion-log-out'></i>    
+                    Sair
+                </button>
+        </ion-footer-bar>
 
     </ion-side-menu>
 </ion-side-menus>
