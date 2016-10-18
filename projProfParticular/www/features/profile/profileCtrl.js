@@ -28,17 +28,21 @@ function ($scope, $stateParams, $location, $ionicLoading) {
 		$ionicLoading.hide();
 	}
 
-	if(user != null){
-		console.log("ProfileCtrl| Menu: displayName: " + user.displayName);
-		console.log("ProfileCtrl| Menu: photoURL: " + user.photoURL);
-		profileCtrl.user.displayName = user.displayName || user.email;
-		profileCtrl.user.photoURL = user.photoURL || 'img/login-bkg.jpg';
-		profileCtrl.user.email = user.email || '';
+	profileCtrl.updateVariables = function(){
+		if(user != null){
+			console.log("ProfileCtrl| Menu: displayName: " + user.displayName);
+			console.log("ProfileCtrl| Menu: photoURL: " + user.photoURL);
+			profileCtrl.user.displayName = user.displayName || user.email;
+			profileCtrl.user.photoURL = user.photoURL || 'img/login-bkg.jpg';
+			profileCtrl.user.email = user.email || '';
 
-		console.log("ProfileCtrl| ProfileCtrl: displayName: " + profileCtrl.user.displayName);
-		console.log("ProfileCtrl| ProfileCtrl: photoURL: " + profileCtrl.user.photoURL);
+			console.log("ProfileCtrl| ProfileCtrl: displayName: " + profileCtrl.user.displayName);
+			console.log("ProfileCtrl| ProfileCtrl: photoURL: " + profileCtrl.user.photoURL);
 
+		}
 	}
+
+	profileCtrl.updateVariables();
 
 	profileCtrl.changeDisplayName = function(){
 		console.log("Estou aqui");
@@ -49,10 +53,12 @@ function ($scope, $stateParams, $location, $ionicLoading) {
 			}).then(function(){
 				console.log("ProfileCtrl |Display Name foi atualizado com sucesso!");
 				profileCtrl.newUserInfos.displayName = '';
+				profileCtrl.updateVariables();
 				hideLoading();
 				//user.$save();
 			}, function(error){
 				console.log("ProfileCtrl |Erro ao atualizar Display Name");
+				profileCtrl.updateVariables();
 				hideLoading();
 			});
 		}
