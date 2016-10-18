@@ -11,7 +11,7 @@ function ($scope, $stateParams, $location, $ionicLoading, UserInfos) {
 		email: ''
 	};
 
-	console.log("ProfileCtrl | Vou imprimir do service" + UserInfos.getDisplayName());
+	//console.log("ProfileCtrl | Vou imprimir do service" + UserInfos.getDisplayName());
 
 	profileCtrl.newUserInfos = {
 		displayName: '',

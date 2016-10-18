@@ -1,10 +1,10 @@
 
 //NAO MUDAR PARA appProf SE NAO DA ERRO
 angular.module('app.controllers', [])
-.controller('MenuCtrl', ['$scope', '$stateParams', '$location',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('MenuCtrl', ['$scope', '$stateParams', '$location', 'UserInfos',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $location, currentAuth) {
+function ($scope, $stateParams, $location, UserInfos, currentAuth) {
 	var menuCtrl = this;
 
 	console.log("MenuCtrl| estou aqui");
@@ -16,17 +16,13 @@ function ($scope, $stateParams, $location, currentAuth) {
 		email: ''
 	};
 
-	if(user != null){
-		console.log("MenuCtrl| Menu: displayName: " + user.displayName);
-		console.log("MenuCtrl| Menu: photoURL: " + user.photoURL);
-		menuCtrl.user.displayName = user.displayName || user.email;
-		menuCtrl.user.photoURL = user.photoURL || 'img/login-bkg.jpg';
-		menuCtrl.user.email = user.email || '';
-
-		console.log("MenuCtrl| MenuCtrl: displayName: " + menuCtrl.user.displayName);
-		console.log("MenuCtrl| MenuCtrl: photoURL: " + menuCtrl.user.photoURL);
-
+	menuCtrl.updateVariables = function(){
+		if(user != null){
+			menuCtrl.user = UserInfos.getUserInfos();
+		}
 	}
+
+	menuCtrl.updateVariables();
 
 	menuCtrl.logout = function(){
 		firebase.auth().signOut().then(function() {
