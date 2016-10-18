@@ -1,8 +1,8 @@
 appProf
-.controller('ProfileCtrl', ['$scope', '$stateParams', '$location', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('ProfileCtrl', ['$scope', '$stateParams', '$location', '$ionicLoading',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $location) {
+function ($scope, $stateParams, $location, $ionicLoading) {
 	var profileCtrl = this;
 
 	profileCtrl.user = {
@@ -16,6 +16,17 @@ function ($scope, $stateParams, $location) {
 		photoURL: '',
 		email: ''
 	};
+
+	var showLoading = function(){
+		$ionicLoading.show({
+			template: 'Atualizando...',
+			noBackdrop: true
+		});
+	}
+
+	var hideLoading = function(){
+		$ionicLoading.hide();
+	}
 
 	if(user != null){
 		console.log("ProfileCtrl| Menu: displayName: " + user.displayName);
@@ -32,14 +43,17 @@ function ($scope, $stateParams, $location) {
 	profileCtrl.changeDisplayName = function(){
 		console.log("Estou aqui");
 		if(profileCtrl.newUserInfos.displayName != '' && user != null){
+			showLoading();
 			user.updateProfile({
 				displayName: profileCtrl.newUserInfos.displayName
 			}).then(function(){
 				console.log("ProfileCtrl |Display Name foi atualizado com sucesso!");
+				profileCtrl.newUserInfos.displayName = '';
+				hideLoading();
 				//user.$save();
-				$location.path('/home');
 			}, function(error){
 				console.log("ProfileCtrl |Erro ao atualizar Display Name");
+				hideLoading();
 			});
 		}
 	};
