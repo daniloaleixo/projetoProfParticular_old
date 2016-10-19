@@ -8,10 +8,11 @@
             <div class="spacer" style="width: 300px; height: 25px;"></div>
         </form>
         <div>
-            <ul>
-                <li ng-repeat="professor in professoresCtrl.professores">{{professor.displayName}}</li>
+            <ion-list>
+                <ion-item ng-repeat="professor in professoresCtrl.professores">{{professor.displayName}}
+                </ion-item>
                 <!--li>dsdaad</li-->
-            </ul>
+            </ion-list>
         </div>
     </ion-content>
 </ion-view>
