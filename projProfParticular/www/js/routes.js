@@ -41,8 +41,8 @@ angular.module('app.routes', [])
     url: '/professores',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/professores.html',
-        controller: 'professoresCtrl',
+        templateUrl: 'features/professores/professores.html',
+        controller: 'ProfessoresCtrl as professoresCtrl',
         resolve: {
           // controller will not be loaded until $requireSignIn resolves
           // Auth refers to our $firebaseAuth wrapper in the factory below
