@@ -11,6 +11,14 @@ var appProf = angular.module('app', ['ionic', 'app.controllers', 'app.routes', '
 
 appProf.value('user');
 
+appProf.constant('FIREBASE_CONFIG', {
+  apiKey: "AIzaSyDRXTIuWMxl73q9aNrAUaxR7MMtSMXq32E",
+  authDomain: "projprofparticular.firebaseapp.com",
+  databaseURL: "https://projprofparticular.firebaseio.com",
+  storageBucket: "projprofparticular.appspot.com",
+  messagingSenderId: "240797807247"
+})
+
 appProf.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

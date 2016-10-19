@@ -1,6 +1,9 @@
 {
-	"alunos": {
-		"MqhNsmQB69XOR8uUjGKXtvEoP002":{
+	"alunos": [
+		{
+			"UID": "MqhNsmQB69XOR8uUjGKXtvEoP002",
+			"displayName":"Bla",
+			"photoURL":"",
 			"localizacoes":{
 				"principal":"Rua xyz, 180",
 				"secundararias" : []
@@ -8,9 +11,12 @@
 			"agenda": [],
 			"favoritos":[]
 		}
-	},
-	"professores":{
-		"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":{
+	],
+	"professores":[
+		{
+			"UID": "8B1eYE4JZ8MYTpVjYBZFlhGJBO52",
+			"displayName":"Danilo Aleixo",
+			"photoURL":"",
 			"materias":{
 				"fundamental":["matematica", "fisica"],
 				"medio":["matematica", "fisica"],
@@ -49,7 +55,7 @@
 			},
 			"agenda":[]
 		}
-	},
+	],
 	"materias":{
 		"fundamental":{
 			"matematica":["8B1eYE4JZ8MYTpVjYBZFlhGJBO52"],
