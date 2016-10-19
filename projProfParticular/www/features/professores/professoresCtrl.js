@@ -7,16 +7,24 @@ function ($scope, $stateParams, FIREBASE_CONFIG) {
 	professoresCtrl = this;
 
 	var database = firebase.database();
-	var professores;
+	professoresCtrl.professores = new Array();
 
-	database.ref('/professores/').once('value').then(function(snapshot){
-		console.log("ProfessoresCtrl| consegui um snapshot");
-		professores = snapshot.val();
-		console.log(professores);
-	});
+	professoresCtrl.atualizaListaProfessores = function(){
+		database.ref('/professores/').once('value').then(function(snapshot){
+			console.log("ProfessoresCtrl| consegui um snapshot");
+			snapshot.val().forEach(function(professor){
+				console.log(professor);
+				if(professor) professoresCtrl.professores.push(professor);
+			})
+		});	
+	}
+
+	professoresCtrl.atualizaListaProfessores();
 
 	
 
+	// console.log("vaiiii");
+	// console.log(professoresCtrl.professores);
 
 	//console.log("ProfessoresCtrl| estou aqui");
 	//console.log("ProfessoresCtrl| " + database);

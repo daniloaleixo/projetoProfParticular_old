@@ -8,7 +8,6 @@ function ($scope, $stateParams, $location, UserInfos, currentAuth) {
 	var menuCtrl = this;
 
 	console.log("MenuCtrl| estou aqui");
-	console.log(currentAuth);
 
 	menuCtrl.user = {
 		displayName: '',
