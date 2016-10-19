@@ -1,58 +1,24 @@
 {
 	"alunos": {
 		"MqhNsmQB69XOR8uUjGKXtvEoP002":{
-			"name": "Blaa",
-			"photoURL": "",
-			"email":"bla@hotmail.com",
 			"localizacoes":{
 				"principal":"Rua xyz, 180",
-				"secundararias" : {}
+				"secundararias" : []
 			},
-			"agenda":{
-
-			}
+			"agenda": [],
+			"favoritos":[]
 		}
 	},
 	"professores":{
 		"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":{
-			"name": "Danilo Aleixo",
-			"photoURL":"",
-			"email":"daniloaleixo94@gmail.com",
 			"materias":{
-				"fundamental":{
-					"matematica":true,
-					"fisica":true,
-					"redacao":false,
-					"quimica":false,
-					"biologia":false,
-					"historia":false,
-					"geografia":false,
-					"portugues":false
-				},
-				"medio":{
-					"matematica":true,
-					"fisica":true,
-					"redacao":false,
-					"quimica":false,
-					"biologia":false,
-					"historia":false,
-					"geografia":false,
-					"portugues":false
-				},
-				"superior":{
-					"matematica":false,
-					"fisica":false,
-					"redacao":false,
-					"quimica":false,
-					"biologia":false,
-					"historia":false,
-					"geografia":false,
-					"portugues":false
-				}
+				"fundamental":["matematica", "fisica"],
+				"medio":["matematica", "fisica"],
+				"superior":[]
 			},
 			"localizacoes":{
 				"principal":"Rua xyz, 180",
-				"secundararias" : {}
+				"secundararias" : []
 			},
 			"curriculo": {
 				"sobre":"Sou muito legal",
@@ -60,11 +26,9 @@
 					"graduacao":{
 						"instituicao": "USP",
 						"status":"cursando",
-						"curso":"Ciencia da Computacao",
+						"curso":"Ciencia da Computacao"
 					},
-					"posGraduacoes":{
-						"mestrado": {}
-					}
+					"posGraduacoes":[]
 				}
 			},
 			"avaliacoes":{
@@ -83,89 +47,39 @@
 
 				}
 			},
-			"agenda":{
-
-			}
+			"agenda":[]
 		}
 	},
 	"materias":{
 		"fundamental":{
-			"matematica":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":true
-			},
-			"fisica":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":true
-			},
-			"redacao":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"quimica":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"biologia":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"historia":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"geografia":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"portugues":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			}
+			"matematica":["8B1eYE4JZ8MYTpVjYBZFlhGJBO52"],
+			"fisica":["8B1eYE4JZ8MYTpVjYBZFlhGJBO52"],
+			"redacao":[],
+			"quimica":[],
+			"biologia":[],
+			"historia":[],
+			"geografia":[],
+			"portugues":[]
 		},
 		"medio":{
-			"matematica":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":true
-			},
-			"fisica":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":true
-			},
-			"redacao":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"quimica":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"biologia":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"historia":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"geografia":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"portugues":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			}
+			"matematica":["8B1eYE4JZ8MYTpVjYBZFlhGJBO52"],
+			"fisica":["8B1eYE4JZ8MYTpVjYBZFlhGJBO52"],
+			"redacao":[],
+			"quimica":[],
+			"biologia":[],
+			"historia":[],
+			"geografia":[],
+			"portugues":[]
 		},
 		"superior":{
-			"matematica":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"fisica":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"redacao":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"quimica":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"biologia":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"historia":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"geografia":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			},
-			"portugues":{
-				"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":false
-			}
+			"matematica":[],
+			"fisica":[],
+			"redacao":[],
+			"quimica":[],
+			"biologia":[],
+			"historia":[],
+			"geografia":[],
+			"portugues":[]
 		}
 	}
 }
