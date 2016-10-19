@@ -1,0 +1,15 @@
+{
+	"alunos": {
+		"MqhNsmQB69XOR8uUjGKXtvEoP002":{
+			"name": "Blaa",
+			"photoURL": "",
+			"localizacoes":{
+				"principal":"Rua xyz, 180",
+				"secundararias" : {}
+			},
+			"agenda":{
+
+			}
+		}
+	}
+}
