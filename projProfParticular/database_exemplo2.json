@@ -1,15 +1,85 @@
 {
 	"alunos": {
 		"MqhNsmQB69XOR8uUjGKXtvEoP002":{
-			"name": "Blaa",
-			"photoURL": "",
 			"localizacoes":{
 				"principal":"Rua xyz, 180",
-				"secundararias" : {}
+				"secundararias" : []
 			},
-			"agenda":{
+			"agenda": [],
+			"favoritos":[]
+		}
+	},
+	"professores":{
+		"8B1eYE4JZ8MYTpVjYBZFlhGJBO52":{
+			"materias":{
+				"fundamental":["matematica", "fisica"],
+				"medio":["matematica", "fisica"],
+				"superior":[]
+			},
+			"localizacoes":{
+				"principal":"Rua xyz, 180",
+				"secundararias" : []
+			},
+			"curriculo": {
+				"sobre":"Sou muito legal",
+				"formacao":{
+					"graduacao":{
+						"instituicao": "USP",
+						"status":"cursando",
+						"curso":"Ciencia da Computacao"
+					},
+					"posgraduacoes":[]
+				}
+			},
+			"avaliacoes":{
+				"quantidade": 0,
+				"didatica":5,
+				"conhecimento":5,
+				"simpatia":5
+			},
+			"horariosDisponiveis":{
+				"segunda":{
+					"8-9":true,
+					"9-10":true,
+					"10-11":false
+				},
+				"terca":{
 
-			}
+				}
+			},
+			"agenda":[]
+		}
+	},
+	"materias":{
+		"fundamental":{
+			"matematica":["8B1eYE4JZ8MYTpVjYBZFlhGJBO52"],
+			"fisica":["8B1eYE4JZ8MYTpVjYBZFlhGJBO52"],
+			"redacao":[],
+			"quimica":[],
+			"biologia":[],
+			"historia":[],
+			"geografia":[],
+			"portugues":[]
+		},
+		"medio":{
+			"matematica":["8B1eYE4JZ8MYTpVjYBZFlhGJBO52"],
+			"fisica":["8B1eYE4JZ8MYTpVjYBZFlhGJBO52"],
+			"redacao":[],
+			"quimica":[],
+			"biologia":[],
+			"historia":[],
+			"geografia":[],
+			"portugues":[]
+		},
+		"superior":{
+			"matematica":[],
+			"fisica":[],
+			"redacao":[],
+			"quimica":[],
+			"biologia":[],
+			"historia":[],
+			"geografia":[],
+			"portugues":[]
 		}
 	}
 }
