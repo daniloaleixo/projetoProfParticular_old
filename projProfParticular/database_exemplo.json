@@ -24,8 +24,12 @@
 				"superior":[]
 			},
 			"localizacoes":{
-				"principal":"Rua xyz, 180",
-				"cidade": "São Paulo - SP",
+				"principal": {
+					"logradouro": "Rua xyz, 180",
+					"cidade": "São Paulo ",
+					"estado":"SP",
+					"CEP": "05454555"
+				},
 				"secundararias" : []
 			},
 			"curriculo": {
