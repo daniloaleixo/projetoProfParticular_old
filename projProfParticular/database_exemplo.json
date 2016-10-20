@@ -24,6 +24,7 @@
 			},
 			"localizacoes":{
 				"principal":"Rua xyz, 180",
+				"cidade": "São Paulo - SP",
 				"secundararias" : []
 			},
 			"curriculo": {
