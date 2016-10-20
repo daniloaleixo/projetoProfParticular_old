@@ -12,6 +12,41 @@ function ($scope, $stateParams, FIREBASE_CONFIG) {
 	professoresCtrl.professores = new Array();
 	professoresCtrl.errorMessage = '';
 
+	professoresCtrl.professores = [
+		{
+			"UID": "8B1eYE4JZ8MYTpVjYBZFlhGJBO52",
+			"displayName":"Danilo Aleixo",
+			"photoURL":"img/login-bkg.jpg",
+			"materias":{
+				"fundamental":["matematica", "fisica"],
+				"medio":["matematica", "fisica"],
+				"superior":[]
+			},
+			"avaliacoes":{
+				"quantidade": 0,
+				"didatica":5,
+				"conhecimento":5,
+				"simpatia":5
+			}
+		},
+		{
+			"UID": "8B1eYE4JZ8MYTpVjYBZFlhGJBO52",
+			"displayName":"Ronaldo",
+			"photoURL":"img/login-bkg.jpg",
+			"materias":{
+				"fundamental":["matematica", "fisica"],
+				"medio":["matematica", "fisica"],
+				"superior":[]
+			},
+			"avaliacoes":{
+				"quantidade": 0,
+				"didatica":5,
+				"conhecimento":5,
+				"simpatia":5
+			}
+		}
+	]
+
 	professoresCtrl.atualizaListaProfessores = function(){
 		console.log("adsaad");
 		database.ref('/professores/').once('value').then(function(snapshot){

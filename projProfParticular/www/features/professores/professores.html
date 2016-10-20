@@ -8,14 +8,49 @@
             <div class="spacer" style="width: 300px; height: 25px;"></div>
         </form>
 
-        <div>
-            <span ng-show='professoresCtrl.errorMessage'>{{professoresCtrl.errorMessage}}</span>
 
+        <span ng-show='professoresCtrl.errorMessage'>{{professoresCtrl.errorMessage}}</span>
+
+        <div class="list card" ng-repeat='professor in professoresCtrl.professores'>
+
+            <div class="item item-avatar">
+                <img src="{{professor.photoURL}}">
+                <h2>{{professor.displayName}}</h2>
+                <p>{{professor.avaliacoes.quantidade}}</p>
+            </div>
+
+            <div class="item item-body">
+                <p>
+                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+                the content is from a card-body consisting of an image and paragraph text. The footer
+                consists of tabs, icons aligned left, within the card-footer.
+                </p>
+                <p>
+                <a href="#" class="subdued">1 Like</a>
+                <a href="#" class="subdued">5 Comments</a>
+                </p>
+            </div>
+
+        </div>
+
+
+        <!--div class='list'>
             <ion-list>
-                <ion-item ng-repeat="professor in professoresCtrl.professores">{{professor.displayName}}
-                </ion-item>
-                <!--li>dsdaad</li-->
-            </ion-list>
+                <ion-item ng-repeat="professor in professoresCtrl.professores">
+                    <a class="item item-thumbnail-left" href="#">
+                          <img src="{{professoresCtrl.professores[0].photoURL}}">
+                          <h2>Pretty Hate Machine</h2>
+                          <p>Nine Inch Nails</p>
+                        </a>
+                <!/ion-item>
+                <i>dsdaad</li>
+            </ion-list-->
         </div>
     </ion-content>
 </ion-view>
+
+<!--a class="item item-thumbnail-left" href="#">
+      <img src="cover.jpg">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+    </a-->
