@@ -35,7 +35,7 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig, $ionicLoading) {
 		{
 			"UID": "8B1eYE4JZ8MYTpVjYBZFlhGJBO52",
 			"displayName":"Danilo Aleixo",
-			"photoURL":"img/login-bkg.jpg",
+			"photoURL":"img/null-avatar.png",
 			"materias":{
 				"resumo":["matematica", "fisica"],
 				"fundamental":["matematica", "fisica"],
@@ -72,7 +72,7 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig, $ionicLoading) {
 		{
 			"UID": "8B1eYE4JZ8MYTpVjYBZFlhGJBO52",
 			"displayName":"Ronaldo",
-			"photoURL":"img/login-bkg.jpg",
+			"photoURL":"img/null-avatar.png",
 			"materias":{
 				"resumo":["matematica", "fisica"],
 				"fundamental":["matematica", "fisica"],
