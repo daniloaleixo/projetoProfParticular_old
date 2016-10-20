@@ -1,9 +1,11 @@
 
 appProf
-.controller('ProfessoresCtrl', ['$scope', '$stateParams', 'FIREBASE_CONFIG',  // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('ProfessoresCtrl', ['$scope', '$stateParams', 'FIREBASE_CONFIG','ratingConfig',
+  // The following is the constructor function for this page's controller. 
+  //See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, FIREBASE_CONFIG) {
+function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig) {
 	professoresCtrl = this;
 
 	console.log("ProfessoresCtrl | estou aqui");
@@ -11,6 +13,12 @@ function ($scope, $stateParams, FIREBASE_CONFIG) {
 	var database = firebase.database();
 	professoresCtrl.professores = new Array();
 	professoresCtrl.errorMessage = '';
+
+		// set the rate and max variables
+	  $scope.rating = {};
+	  $scope.rating.rate = 3;
+	  $scope.rating.max = 5;
+	  $scope.readOnly = true;
 
 	professoresCtrl.professores = [
 		{

@@ -16,7 +16,7 @@
             <div class="item item-avatar">
                 <img src="{{professor.photoURL}}">
                 <h2>{{professor.displayName}}</h2>
-                <p>{{professor.avaliacoes.quantidade}}</p>
+                <rating ng-model="rating.rate" max="rating.max" readonly="readOnly"></rating>
             </div>
 
             <div class="item item-body">
