@@ -14,11 +14,11 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig) {
 	professoresCtrl.professores = new Array();
 	professoresCtrl.errorMessage = '';
 
-		// set the rate and max variables
-	  $scope.rating = {};
-	  $scope.rating.rate = 3;
-	  $scope.rating.max = 5;
-	  $scope.readOnly = true;
+	// set the rate and max variables
+	professoresCtrl.rating = {
+		'max': 5,
+		'readOnly': true
+	}
 
 	professoresCtrl.professores = [
 		{
@@ -48,7 +48,7 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig) {
 			},
 			"avaliacoes":{
 				"quantidade": 0,
-				"didatica":5,
+				"didatica":3.5,
 				"conhecimento":5,
 				"simpatia":5
 			}
