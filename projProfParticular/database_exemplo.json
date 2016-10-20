@@ -60,6 +60,54 @@
 				}
 			},
 			"agenda":[]
+		},
+		{
+			"UID": "ZyEKlWn4tDh2esPRV8sGYGf77jq1",
+			"displayName":"Bla  3",
+			"photoURL":"",
+			"materias":{
+				"resumo":["historia", "geografia"],
+				"fundamental":["historia", "geografia"],
+				"medio":["historia", "geografia"],
+				"superior":[]
+			},
+			"localizacoes":{
+				"principal": {
+					"logradouro": "Rua xyz, 180",
+					"cidade": "Campinas",
+					"estado":"SP",
+					"CEP": "05454555"
+				},
+				"secundararias" : []
+			},
+			"curriculo": {
+				"sobre":"Dou aulas particulares há 5 anos e ja fiz isso e isso e isso, sempre estou presente na vida da galera e quero um texto longo",
+				"formacao":{
+					"graduacao":{
+						"instituicao": "USP",
+						"status":"Cursando",
+						"curso":"História"
+					},
+					"posGraduacoes":[]
+				}
+			},
+			"avaliacoes":{
+				"quantidade": 0,
+				"didatica":3.5,
+				"conhecimento":5,
+				"simpatia":5
+			},
+			"horariosDisponiveis":{
+				"segunda":{
+					"8-9":true,
+					"9-10":true,
+					"10-11":false
+				},
+				"terca":{
+
+				}
+			},
+			"agenda":[]
 		}
 	],
 	"materias":{
@@ -69,8 +117,8 @@
 			"redacao":[],
 			"quimica":[],
 			"biologia":[],
-			"historia":[],
-			"geografia":[],
+			"historia":["ZyEKlWn4tDh2esPRV8sGYGf77jq1"],
+			"geografia":["ZyEKlWn4tDh2esPRV8sGYGf77jq1"],
 			"portugues":[]
 		},
 		"medio":{
@@ -79,8 +127,8 @@
 			"redacao":[],
 			"quimica":[],
 			"biologia":[],
-			"historia":[],
-			"geografia":[],
+			"historia":["ZyEKlWn4tDh2esPRV8sGYGf77jq1"],
+			"geografia":["ZyEKlWn4tDh2esPRV8sGYGf77jq1"],
 			"portugues":[]
 		},
 		"superior":{

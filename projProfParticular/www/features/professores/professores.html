@@ -15,7 +15,7 @@
 
             <div class="item row" style="padding:10px;">
                 <div class="col col-30">
-                    <img class='item-professor-avatar' src="{{professor.photoURL || '../img/null-avatar.png'}}" 
+                    <img class='item-professor-avatar' src="{{professor.photoURL || 'img/null-avatar.png'}}" 
                             style="margin-right:25px;">
                 </div>
 
@@ -25,6 +25,9 @@
                             readonly="professoresCtrl.rating.readOnly"></rating>
                     <p style='margin-top: 10px;'>
                         {{professor.localizacoes.principal.cidade}} - {{professor.localizacoes.principal.estado}}
+                    </p>
+                    <p>
+                        <i class='icon ion-ios-location'>10km distante de você</i>
                     </p>
                 </div>  
                 <!-- Curriculo -->
