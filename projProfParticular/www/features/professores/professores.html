@@ -13,10 +13,11 @@
 
         <div class="list card" ng-repeat='professor in professoresCtrl.professores'>
 
-            <div class="item item-avatar">
-                <img src="{{professor.photoURL}}">
-                <h2>{{professor.displayName}}</h2>
-                <rating ng-model="professor.avaliacoes.didatica" max="professoresCtrl.rating.max" 
+            <div class="item">
+                <img class='card-professor-avatar' src="{{professor.photoURL}}">
+                <h2 style='text-align: center;'>{{professor.displayName}}</h2>
+                <rating style='text-align: center;'
+                        ng-model="professor.avaliacoes.didatica" max="professoresCtrl.rating.max" 
                         readonly="professoresCtrl.rating.readOnly"></rating>
             </div>
 

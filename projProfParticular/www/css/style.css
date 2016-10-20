@@ -78,6 +78,32 @@ text-align: center;
     text-align: center;
 }
 
+.card-professor-avatar {
+    
+    /* make a square container */
+    width: 100px;
+    height: 100px;
+
+
+    margin: 25px auto;
+
+    overflow: hidden;
+
+    float: left !important;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    background-position: left;
+
+    /* round the edges to a circle with border radius 1/2 container size */
+    border-radius: 50%;
+    position: relative;
+
+    text-align: left;
+}
+
 ul.rating li {
   display: inline;
   border: 0px;
