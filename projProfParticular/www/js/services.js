@@ -15,7 +15,7 @@ angular.module('app.services', [])
 
 		var updateUser = function(){
 			servUser.displayName = user.displayName || user.email;
-			servUser.photoURL = user.photoURL || '../img/null-avatar.png';
+			servUser.photoURL = user.photoURL || 'img/null-avatar.png';
 			servUser.email = user.email || '';
 		}
 
