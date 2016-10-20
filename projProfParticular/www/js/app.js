@@ -8,7 +8,7 @@
 
 
 var appProf = angular.module('app', ['ionic', 'app.controllers', 'app.routes', 
-  'app.directives','app.services', 'firebase', 'ionic.rating']);
+  'app.directives','app.services', 'firebase', 'ionic.rating', 'jett.ionic.filter.bar']);
 
 appProf.value('user');
 

@@ -1,11 +1,12 @@
 
 appProf
-.controller('ProfessoresCtrl', ['$scope', '$stateParams', 'FIREBASE_CONFIG','ratingConfig', '$ionicLoading',
+.controller('ProfessoresCtrl', ['$scope', '$stateParams', 'FIREBASE_CONFIG',
+	'ratingConfig', '$ionicLoading','$ionicFilterBar',
   // The following is the constructor function for this page's controller. 
   //See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig, $ionicLoading) {
+function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig, $ionicLoading, $ionicFilterBar) {
 	professoresCtrl = this;
 
 	console.log("ProfessoresCtrl | estou aqui");
@@ -13,6 +14,7 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig, $ionicLoading) {
 	var database = firebase.database();
 	professoresCtrl.professores = new Array();
 	professoresCtrl.errorMessage = '';
+	professoresCtrl.filterBarInstance;
 
 	// set the rate and max variables
 	professoresCtrl.rating = {
@@ -55,8 +57,16 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig, $ionicLoading) {
 
 	professoresCtrl.atualizaListaProfessores();
 
-	console.log("ProfessoresCtrl | peguei os professores");
-	console.log(professoresCtrl.professores);
+
+	professoresCtrl.showFilterBar = function(){
+		filterBarInstance = $ionicFilterBar.show({
+			items: professoresCtrl.professores,
+			update: function(filteredItems) {
+				professoresCtrl.professores = filteredItems;
+			},
+			filterProperties: 'displayName'
+		});
+	};
 
 
 	
