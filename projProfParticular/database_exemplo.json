@@ -18,6 +18,7 @@
 			"displayName":"Danilo Aleixo",
 			"photoURL":"",
 			"materias":{
+				"resumo":["matematica", "fisica"],
 				"fundamental":["matematica", "fisica"],
 				"medio":["matematica", "fisica"],
 				"superior":[]
@@ -32,7 +33,7 @@
 				"formacao":{
 					"graduacao":{
 						"instituicao": "USP",
-						"status":"cursando",
+						"status":"Cursando",
 						"curso":"Ciencia da Computacao"
 					},
 					"posGraduacoes":[]

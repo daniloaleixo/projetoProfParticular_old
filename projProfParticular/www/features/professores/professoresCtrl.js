@@ -26,6 +26,7 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig) {
 			"displayName":"Danilo Aleixo",
 			"photoURL":"img/login-bkg.jpg",
 			"materias":{
+				"resumo":["matematica", "fisica"],
 				"fundamental":["matematica", "fisica"],
 				"medio":["matematica", "fisica"],
 				"superior":[]
@@ -35,6 +36,17 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig) {
 				"didatica":5,
 				"conhecimento":5,
 				"simpatia":5
+			},
+			"curriculo": {
+				"sobre":"Dou aulas particulares há 5 anos e ja fiz isso e isso e isso, sempre estou presente na vida da galera e quero um texto longo",
+				"formacao":{
+					"graduacao":{
+						"instituicao": "USP",
+						"status":"Cursando",
+						"curso":"Ciencia da Computacao"
+					},
+					"posGraduacoes":[]
+				}
 			}
 		},
 		{
@@ -42,6 +54,7 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig) {
 			"displayName":"Ronaldo",
 			"photoURL":"img/login-bkg.jpg",
 			"materias":{
+				"resumo":["matematica", "fisica"],
 				"fundamental":["matematica", "fisica"],
 				"medio":["matematica", "fisica"],
 				"superior":[]
@@ -51,6 +64,17 @@ function ($scope, $stateParams, FIREBASE_CONFIG, ratingConfig) {
 				"didatica":3.5,
 				"conhecimento":5,
 				"simpatia":5
+			},
+			"curriculo": {
+				"sobre":"Sou muito legal",
+				"formacao":{
+					"graduacao":{
+						"instituicao": "USP",
+						"status":"Cursando",
+						"curso":"História"
+					},
+					"posGraduacoes":[]
+				}
 			}
 		}
 	]

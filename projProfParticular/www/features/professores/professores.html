@@ -14,22 +14,44 @@
         <div class="list card" ng-repeat='professor in professoresCtrl.professores'>
 
             <div class="item">
-                <img class='card-professor-avatar' src="{{professor.photoURL}}">
-                <h2 style='text-align: center;'>{{professor.displayName}}</h2>
+                <img class='item-professor-avatar' src="{{professor.photoURL}}" style="margin-right:25px;">
+
+                <h2 style='text-align: center; margin-top: 10px;'>{{professor.displayName}}</h2>
                 <rating style='text-align: center;'
                         ng-model="professor.avaliacoes.didatica" max="professoresCtrl.rating.max" 
                         readonly="professoresCtrl.rating.readOnly"></rating>
+
+                <!-- Curriculo -->
+                <!--div  style='word-wrap: break-word; text-align: center; margin-top: 20px;'
+                        class='item item-body'>
+                <p style="margin-top:0px; margin-bottom:0px;">
+                    <i class="icon ion-university">
+                        {{professor.curriculo.formacao.graduacao.status}} 
+                        {{professor.curriculo.formacao.graduacao.curso}} 
+                        na {{professor.curriculo.formacao.graduacao.instituicao}}
+                    </i>
+                </p>
+                </div-->
             </div>
 
             <div class="item item-body">
-                <p>
-                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                the content is from a card-body consisting of an image and paragraph text. The footer
-                consists of tabs, icons aligned left, within the card-footer.
+                <!-- Faculdade -->
+                <p style="margin-top:0px; margin-bottom:0px;font-size:14px;">
+                    <i class="icon ion-university">
+                        {{professor.curriculo.formacao.graduacao.status}} 
+                        {{professor.curriculo.formacao.graduacao.curso}} 
+                        na {{professor.curriculo.formacao.graduacao.instituicao}}
+                    </i>
                 </p>
-                <p>
-                <a href="#" class="subdued">1 Like</a>
-                <a href="#" class="subdued">5 Comments</a>
+                <!-- Aulas que ensina -->
+                <p style="margin-top:0px; margin-bottom:0px;font-size:14px;">
+                    <i class="icon ion-easel">
+                        Ensina 
+                        <item ng-repeat='materia in professor.materias.resumo'>{{materia}}, </item>
+                    </i>
+                </p>
+                <p  style="margin-top:0px; margin-bottom:0px;font-size:14px;">
+                Sobre: {{professor.curriculo.sobre}}
                 </p>
             </div>
 
