@@ -7,7 +7,10 @@
             </label>
             <div class="spacer" style="width: 300px; height: 25px;"></div>
         </form>
+
         <div>
+            <span ng-show='professoresCtrl.errorMessage'>{{professoresCtrl.errorMessage}}</span>
+
             <ion-list>
                 <ion-item ng-repeat="professor in professoresCtrl.professores">{{professor.displayName}}
                 </ion-item>
