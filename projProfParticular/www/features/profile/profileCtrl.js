@@ -49,6 +49,7 @@ function ($scope, $stateParams, $location, $ionicLoading, UserInfos) {
 				console.log("ProfileCtrl |Display Name foi atualizado com sucesso!");
 				profileCtrl.newUserInfos.displayName = '';
 				profileCtrl.updateVariables();
+				$scope.$digest();
 				hideLoading();
 			}, function(error){
 				console.log("ProfileCtrl |Erro ao atualizar Display Name");
