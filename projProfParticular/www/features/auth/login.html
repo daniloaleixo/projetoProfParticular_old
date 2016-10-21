@@ -24,10 +24,14 @@
 
             
             <div>
-                <button type="submit"
-                id="login-button1" class="button button-balanced  button-block action-button">
-                        {{ loginCtrl.signingUp ? 'Cadastrar' : 'Entrar'}}
-                </button>     
+                <!-- Accent-colored raised button -->
+                <button class="mdl-button mdl-js-button mdl-button--raised
+                             mdl-button--accent button button-block action-button"
+                        style="background-color:#FF5722">
+                          {{ loginCtrl.signingUp ? 'Cadastrar' : 'Entrar'}} 
+                </button>
+                
+  
             </div>
         </form>
 
