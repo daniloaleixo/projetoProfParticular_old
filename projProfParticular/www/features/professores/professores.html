@@ -12,7 +12,7 @@
 
         <span ng-show='professoresCtrl.errorMessage'>{{professoresCtrl.errorMessage}}</span>
 
-        <div class="list card" ng-repeat='professor in professoresCtrl.professores'>
+        <div class="list card mdl-shadow--2dp" ng-repeat='professor in professoresCtrl.professores'>
 
             <div class="item row" style="padding:10px;">
                 <div class="col col-30">
@@ -21,9 +21,10 @@
                 </div>
 
                 <div class="col" style="text-align:left;">
-                    <h2 style='margin-top: 10px;'>{{professor.displayName}}</h2>
+                    <h2 style='margin-top: -20px;'>{{professor.displayName}}</h2>
                     <rating ng-model="professor.avaliacoes.didatica" max="professoresCtrl.rating.max" 
-                            readonly="professoresCtrl.rating.readOnly"></rating>
+                            readonly="professoresCtrl.rating.readOnly"
+                            style='margin-top: -20px;'></rating>
                     <p style='margin-top: 10px;'>
                         {{professor.localizacoes.principal.cidade}} - {{professor.localizacoes.principal.estado}}
                     </p>
