@@ -1,10 +1,10 @@
 
 //NAO MUDAR PARA appProf SE NAO DA ERRO
 angular.module('app.controllers', [])
-.controller('MenuCtrl', ['$scope', '$stateParams', '$location', 'UserInfos',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('MenuCtrl', ['$scope', '$stateParams', '$location', 'UserInfos','$ionicSideMenuDelegate',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $location, UserInfos, currentAuth) {
+function ($scope, $stateParams, $location, UserInfos, $ionicSideMenuDelegate, currentAuth) {
 	var menuCtrl = this;
 
 	console.log("MenuCtrl| estou aqui");
@@ -28,6 +28,7 @@ function ($scope, $stateParams, $location, UserInfos, currentAuth) {
 		  	console.log('MenuCtrl| Signed Out');
 		  	user = null;
 		  	$location.path('/login');
+		  	$ionicSideMenuDelegate.toggleLeft();
 		  	menuCtrl.user.displayName = null;
 			menuCtrl.user.photoURL = null;
 			menuCtrl.user.email = null;
