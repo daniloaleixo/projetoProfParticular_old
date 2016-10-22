@@ -50,16 +50,21 @@
 
         </ion-content>
 
-        <ion-footer-bar class="bar-stable">
-            <!--ion-item nav-clear menu-close href="#" 
-                     style="left:0;right:0;margin:0; width: 100%;position: fixed;padding-bottom:40px;">
-            Sair
-            </ion-item-->
-            <button class="button button-block button-light" ng-click="menuCtrl.logout()"
+        <ion-footer-bar class="bar-light">
+            <!-- Accent-colored raised button with ripple -->
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent 
+                            button button-block" 
+            style="left:0;right:0;margin:0; width: 100%;position: fixed"
+            ng-click="menuCtrl.logout()">
+            <i class='icon ion-log-out'></i>  
+              Sair
+            </button>
+
+            <!--button class="button button-block button-light" ng-click="menuCtrl.logout()"
                         style="left:0;right:0;margin:0; width: 100%;position: fixed">
                     <i class='icon ion-log-out'></i>    
                     Sair
-                </button>
+                </button-->
         </ion-footer-bar>
 
     </ion-side-menu>
