@@ -1,8 +1,12 @@
 <ion-view title="Login" hide-nav-bar="true" id="page4" class='login-page'>
     <ion-content padding="true" class="manual-ios-statusbar-padding" scroll='false'>
 
-        <div class='padding logo'>
-            <h1>titulo</h1>
+        <div class='padding' style="text-align:center;">
+            <img src='img/caqui.png' class='logo'>
+        </div>
+
+        <div class='title'>
+            <h1>EduCaqui</h1>
         </div>
 
         <span class='error-message' ng-show='loginCtrl.error'> {{loginCtrl.error}} </span>
@@ -26,7 +30,7 @@
             <div>
                 <!-- Accent-colored raised button -->
                 <button class="mdl-button mdl-js-button mdl-button--raised
-                             mdl-button--primary button button-block action-button">
+                             mdl-button--accent button button-block action-button">
                           {{ loginCtrl.signingUp ? 'Cadastrar' : 'Entrar'}} 
                 </button>
                 
@@ -35,7 +39,8 @@
         </form>
 
         <div style="margin-top:40px;">
-            <button class="button button-assertive button-block action-button" ng-click='loginCtrl.googleLogin()'>
+            <button class="mdl-button mdl-js-button mdl-button--raised
+                             button-assertive button button-block action-button" ng-click='loginCtrl.googleLogin()'>
               <i class="icon ion-social-google" style="margin-right:20px;"></i> 
               Entrar com o Google
             </button>
