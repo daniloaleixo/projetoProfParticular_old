@@ -17,15 +17,20 @@
                 <div style="margin-top:30px;"></div-->
             <div class="item item-avatar item-avatar-background">
                 <img src="{{ menuCtrl.user.photoURL }}">
-                <h2 style="color:#FFFFFF;">{{ menuCtrl.user.displayName || '' }}</h2>
+                <h2 style="color:#FFFFFF;">
+                    {{ menuCtrl.user.displayName || '' }}
+                    <!-- Icon button -->
+                    <button class="mdl-button mdl-js-button mdl-button--icon" 
+                            style="float:right; margin-top:5px;"
+                            ui-sref="menu.profile" menu-close="">
+                      <i class="icon ion-edit"></i>
+                    </button>
+
+                    </button>
+                </h2>
             </div>
 
             <ion-list id="menu-list3">
-                <ion-item id="menu-list-item3" ui-sref="menu.profile" menu-close="" class='item     item-icon-left'>
-                    <i class="icon ion-clock"></i>
-                    Editar perfil
-                </ion-item>
-                <div style="margin-top:80px;"></div>
                 <ion-item id="menu-list-item1" ui-sref="menu.home" menu-close="" class='item item-icon-left'>
                     <i class="icon ion-home"></i>
                     Home
