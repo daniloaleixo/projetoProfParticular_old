@@ -15,12 +15,13 @@
         <div class="list card mdl-shadow--2dp" ng-repeat='professor in professoresCtrl.professores'>
 
             <div class="item row" style="padding:10px;">
-                <div class="col col-30">
+
+                <div class="col col-40">
                     <img class='item-professor-avatar' src="{{professor.photoURL || 'img/null-avatar.png'}}" 
                             style="margin-right:25px;">
                 </div>
 
-                <div class="col" style="text-align:left;">
+                <div class="col" style="text-align:left;margin-left:-30px;">
                     <h2 style='margin-top: -20px;'>{{professor.displayName}}</h2>
                     <rating ng-model="professor.avaliacoes.didatica" max="professoresCtrl.rating.max" 
                             readonly="professoresCtrl.rating.readOnly"
