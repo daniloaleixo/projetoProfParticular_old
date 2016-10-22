@@ -51,6 +51,10 @@ max-height: 200px !important;
 text-align: center;
 }
 
+.item-avatar-background {
+  background-color: #BF360C;
+}
+
 .user-name {
   color:#555555;
   text-align: center;

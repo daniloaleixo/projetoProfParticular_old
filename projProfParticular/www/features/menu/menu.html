@@ -15,10 +15,9 @@
             <!--img class='item-avatar-overload' src="{{ menuCtrl.photoURL }}">
                 <h2 class='user-name'>{{ menuCtrl.displayName }}</h2>
                 <div style="margin-top:30px;"></div-->
-            <div class="item item-avatar">
+            <div class="item item-avatar item-avatar-background">
                 <img src="{{ menuCtrl.user.photoURL }}">
-                <h2>{{ menuCtrl.user.displayName || '' }}</h2>
-                <p>{{menuCtrl.user.email}}</p>
+                <h2 style="color:#FFFFFF;">{{ menuCtrl.user.displayName || '' }}</h2>
             </div>
 
             <ion-list id="menu-list3">
